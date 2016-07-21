@@ -12,12 +12,13 @@ depends=('mono>=4.0.3.20')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/fsharp/$pkgname/archive/$pkgver.tar.gz"
 "Makefile")
 md5sums=('5974b6df0aa6df01f153afadcbdc6061'
-         '43db61306415c14794434aeadb60c643')
+         '72399b0b526807ff847d7d090344a36c')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
   ./autogen.sh --prefix=/usr
   cp $srcdir/Makefile $srcdir/fsharp-4.0.1.5/src/fsharp
+  sed -i -e "s|<SRCDIR>|$srcdir|g" $srcdir/fsharp-4.0.1.5/src/fsharp/Makefile
   make
 }
 

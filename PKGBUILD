@@ -18,8 +18,8 @@ md5sums=('5974b6df0aa6df01f153afadcbdc6061'
 build() {
   cd "$srcdir/$pkgname-$pkgver"
   ./autogen.sh --prefix=/usr
-  cp $srcdir/Makefile $srcdir/fsharp-4.0.1.5/src/fsharp
-  sed -i -e "s|<SRCDIR>|$srcdir|g" $srcdir/fsharp-4.0.1.5/src/fsharp/Makefile
+  cp $srcdir/Makefile $srcdir/fsharp-$pkgver/src/fsharp
+  sed -i -e "s|<SRCDIR>|$srcdir|g" $srcdir/fsharp-$pkgver/src/fsharp/Makefile
   make
 }
 

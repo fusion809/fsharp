@@ -1,5 +1,6 @@
 # Maintainer: Mort Yao <soi@mort.ninja>
 # Contributor: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: Brenton Horne <brentonhorne77 at gmail dot com>
 
 pkgname=fsharp
 pkgver=4.0.1.5

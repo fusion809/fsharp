@@ -23,5 +23,6 @@ package() {
   cd "$srcdir/$pkgname-$pkgver"
   make DESTDIR="$pkgdir" install
 
-  find "${pkgdir}/usr/lib/mono/fsharp" -name "*.xml" -exec sed -i -e "s|$srcdir||g" '{}';
+  cd "${pkgdir}/usr/lib/mono/fsharp"
+  sed -i -e "s|$srcdir||g" *.xml
 }
